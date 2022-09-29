@@ -2,7 +2,7 @@
 <div class="container">
     <div class="row no-gutters align-items-center justify-content-center">
         <div class="col-md-6 col-lg-4 px-3 px-md-0">
-            <img src="{{ asset("$about->man_photo_src") }}" alt="" class="img-fluid center" >
+            <img src="{{$about->man_photo_src }}" alt="" class="img-fluid center" >
         </div>
         <div class="col-md-6 px-3 px-md-0">
             <div class="px-md-5 my-4 my-md-0">
@@ -14,7 +14,7 @@
             </div>
         </div>
         <div class="col-md-6 col-lg-4 px-3 px-md-0 order-md-last">
-            <img src="{{ asset("$about->woman_photo_src")}}" alt="" class="img-fluid">
+            <img src="{{ $about->woman_photo_src}}" alt="" class="img-fluid">
         </div>
         <div class="col-md-6 px-3 px-md-0">
             <div class="px-md-5 my-4 my-lg-0 text-md-end">
