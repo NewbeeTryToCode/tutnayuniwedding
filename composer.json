@@ -12,7 +12,7 @@
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
-        "laravel/framework": "^8.12",
+        "laravel/framework": "^8.0",
         "laravel/tinker": "^2.5",
         "livewire/livewire": "^2.3"
     },
@@ -52,7 +52,9 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "scripts": {
-        "post-install-cmd": [ "ln -sr storage/app/public/img public/storage" ],
+        "post-install-cmd": [
+            "ln -sr storage/app/public/img public/storage"
+        ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi"
