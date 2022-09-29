@@ -3,12 +3,12 @@
         Options -MultiViews -Indexes
     </IfModule>
 
-    RewriteEngine On
-
-    # Handle Authorization Header
-    RewriteCond %{HTTP:Authorization} .
-    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
-
+    RewriteEngine on
+    RewriteCond %{HTTP_REFERER} ^https?://(www\.)?donotallowthissite\.com [NC,OR]
+    RewriteCond %{HTTP_REFERER} ^https?://(www\.)?donotallowthissite2\.com [NC,OR]
+    RewriteCond %{HTTP_REFERER} ^$
+    RewriteRule \.(jpg|jpeg|png|gif|js|css)$ - [NC,F,L]
+    
     # Redirect Trailing Slashes If Not A Folder...
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_URI} (.+)/$
